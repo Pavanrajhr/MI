@@ -1,0 +1,46 @@
+{
+  "title": "Compressor Tutorial Lesson Plan",
+  "entities": [
+    {
+      "rel": [
+        "item"
+      ],
+      "title": "Example 1",
+      "class": [
+        "lesson"
+      ],
+      "properties": {
+        "explanation": "This is an RLC circuit Modelica model.\n",
+        "model": " type Voltage=Real(unit=\"V\");\r\n  type Current=Real(unit=\"A\");\r\n  type Resistance=Real(unit=\"Ohm\");\r\n  type Capacitance=Real(unit=\"F\");\r\n  type Inductance=Real(unit=\"H\");\r\n  parameter Voltage Vb=24 \"Battery voltage\";\r\n  parameter Inductance L = 1;\r\n  parameter Resistance R = 100;\r\n  parameter Capacitance C = 1e-3;\r\n  Voltage V(fixed=true, start=0);\r\n  Current i_L(fixed=true, start=0);\r\n  Current i_R;\r\n  Current i_C;\r\nequation\r\n  V = i_R*R;\r\n  C*der(V) = i_C;\r\n  L*der(i_L) = (Vb-V);\r\n  i_L=i_R+i_C;\r\n",
+        "preamble": "",
+        "report": "$y({{now.time.toFixed(3)}}) = {{ now.V.toFixed(3) }}$.\r\n\u003cchart signals=\"V\"\u003e\u003c/chart\u003e"
+      }
+    },
+    {
+      "rel": [
+        "item"
+      ],
+      "title": "Example 2",
+      "class": [
+        "lesson"
+      ],
+      "properties": {
+        "explanation": "This is an RLC circuit Modelica model.\n",
+        "model": " type Voltage=Real(unit=\"V\");\r\n  type Current=Real(unit=\"A\");\r\n  type Resistance=Real(unit=\"Ohm\");\r\n  type Capacitance=Real(unit=\"F\");\r\n  type Inductance=Real(unit=\"H\");\r\n  parameter Voltage Vb=24 \"Battery voltage\";\r\n  parameter Inductance L = 1;\r\n  parameter Resistance R = 100;\r\n  parameter Capacitance C = 1e-3;\r\n  Voltage V(fixed=true, start=0);\r\n  Current i_L(fixed=true, start=0);\r\n  Current i_R;\r\n  Current i_C;\r\nequation\r\n  V = i_R*R;\r\n  C*der(V) = i_C;\r\n  L*der(i_L) = (Vb-V);\r\n  i_L=i_R+i_C;\r\n"
+      }
+    },
+    {
+      "rel": [
+        "item"
+      ],
+      "title": "Example 3",
+      "class": [
+        "lesson"
+      ],
+      "properties": {
+        "explanation": "This is an RLC circuit Modelica model.\n",
+        "model": " type Voltage=Real(unit=\"V\");\r\n  type Current=Real(unit=\"A\");\r\n  type Resistance=Real(unit=\"Ohm\");\r\n  type Capacitance=Real(unit=\"F\");\r\n  type Inductance=Real(unit=\"H\");\r\n  parameter Voltage Vb=24 \"Battery voltage\";\r\n  parameter Inductance L = 1;\r\n  parameter Resistance R = 100;\r\n  parameter Capacitance C = 1e-3;\r\n  Voltage V(fixed=true, start=0);\r\n  Current i_L(fixed=true, start=0);\r\n  Current i_R;\r\n  Current i_C;\r\nequation\r\n  V = i_R*R;\r\n  C*der(V) = i_C;\r\n  L*der(i_L) = (Vb-V);\r\n  i_L=i_R+i_C;\r\n"
+      }
+    }
+  ]
+}
